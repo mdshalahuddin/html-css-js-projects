@@ -9,5 +9,10 @@ function displayMessage(){
 if(inputEl.value){
     messageEl.innerHTML = inputEl.value;
     inputEl.value = ''
+}else{
+    errorEl.style.display = "block";
+    setInterval(() => {
+        errorEl.style.display = "none";
+       }, 1000);
 }
 }
