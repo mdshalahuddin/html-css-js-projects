@@ -7,7 +7,7 @@ btnEl.addEventListener('click',displayMessage);
 
 function displayMessage(){
 if(inputEl.value){
-    messageEl.innerHTML = inputEl.value;
+    messageEl.textContent = inputEl.value;
     inputEl.value = ''
 }else{
     errorEl.style.display = "block";
