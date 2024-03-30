@@ -4,9 +4,9 @@ const decreasebtn = document.querySelector('.dec');
 const resetbtn = document.querySelector('.reset');
 let counts = 0;
 decreasebtn.addEventListener("click",()=>{
-    counts++;
+    counts--;
     countEl.innerHTML = counts;
-    if(counts>0){
+    if(counts>1 || counts<0){
         countEl.style.color = "green";
     }if(counts == 0){
         countEl.style.color = "blue";
@@ -14,7 +14,7 @@ decreasebtn.addEventListener("click",()=>{
 })
 
 increasebtn.addEventListener("click",()=>{
-    counts--;
+    counts++;
     countEl.innerHTML = counts;
     if(counts>0){
         countEl.style.color = "green";
