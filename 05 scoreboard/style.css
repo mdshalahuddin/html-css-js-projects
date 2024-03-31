@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(#000000 50%, #07e387 50%);
+}
+.scoreboard {
+  background-color: #1e1e21;
+  width: min(90%, 44em);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  padding: 3em;
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+}
+.team {
+  text-align: center;
+  background-color: #353638;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+button {
+  cursor: pointer;
+}
+
+.team h2 {
+  color: #07e387;
+}
+.team p {
+  color: #ffffff;
+  font-size: 3.75em;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.team button {
+  background-color: #07e387;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  padding: 0.3em 0.7em;
+  border-radius: 0.3em;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+#reset-btn {
+  --b: 3px; /* border thickness */
+  --s: 0.15em; /* size of the corner */
+  --c: #07e387;
+
+  padding: calc(0.05em + var(--s)) calc(0.3em + var(--s));
+  color: var(--c);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--c) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.2em;
+}
+#reset-btn:hover,
+#reset-btn:focus-visible {
+  --_p: 0px;
+  outline-color: var(--c);
+  outline-offset: 0.05em;
+}
+#reset-btn:active {
+  background: var(--c);
+  color: #fff;
+}
+
+#reset-btn {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  margin: 2.1em;
+}
